@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @page { size: 794px 1123px; margin: 0; }
+    :root {
+      --c-bg: #0f231b;
+      --c-accent: #4ba478;
+      --c-text: #f2f7f4;
+      --c-muted: #8fa89b;
+      --c-footer: #6b8578;
+    }
+    html, body { margin: 0; padding: 0; width: 794px; height: 1123px; background: var(--c-bg); color: var(--c-text); font-family: 'Inter', sans-serif; }
+    @media screen {
+      html { height: auto; display: flex; justify-content: center; min-height: 100vh; background: var(--c-bg); }
+      body { transform-origin: top center; scale: min(1, calc(100vw / 794), calc(100vh / 1123)); margin: 0 auto; box-shadow: 0 0 60px rgba(0,0,0,0.3); }
+    }
+    .cover { width: 794px; height: 1123px; position: relative; box-sizing: border-box; border: none; outline: none; box-shadow: none; }
+    .bg-layer { position: absolute; inset: 0; overflow: hidden; z-index: 1; }
+    .bg-glow {
+      position: absolute; right: 0; bottom: 0; width: 70%; height: 55%;
+      background: radial-gradient(closest-side at 78% 82%, rgba(75, 164, 120, 0.07), rgba(75, 164, 120, 0) 75%);
+    }
+    .vline { position: absolute; left: 57px; top: 76px; bottom: 76px; width: 2.5px; background: var(--c-accent); z-index: 2; }
+    .content { position: absolute; left: 103px; right: 76px; top: 0; bottom: 0; z-index: 3; }
+    .label { position: absolute; top: 128px; font-size: 9.5pt; color: var(--c-accent); letter-spacing: 3px; text-transform: uppercase; font-family: 'Inter', sans-serif; font-weight: 500; }
+    .title { position: absolute; top: 220px; font-size: 31pt; font-weight: 700; line-height: 1.32; font-family: 'Playfair Display', serif; color: var(--c-text); max-width: 600px; }
+    .subtitle { position: absolute; top: 545px; font-size: 12pt; line-height: 1.65; color: var(--c-muted); max-width: 520px; }
+    .authors { position: absolute; top: 730px; font-size: 13pt; color: var(--c-text); font-weight: 500; letter-spacing: 0.5px; }
+    .institution { position: absolute; top: 775px; font-size: 10pt; color: var(--c-muted); line-height: 1.5; max-width: 520px; }
+    .stat-strip { position: absolute; top: 880px; display: flex; gap: 42px; }
+    .stat .num { font-size: 20pt; font-weight: 600; color: var(--c-accent); font-family: 'Playfair Display', serif; }
+    .stat .lbl { font-size: 8pt; color: var(--c-footer); letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+    .footer { position: absolute; bottom: 76px; left: 0; right: 0; display: flex; justify-content: space-between; font-size: 9pt; color: var(--c-footer); letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <div class="bg-layer"><div class="bg-glow"></div></div>
+    <div class="vline"></div>
+    <div class="content">
+      <div class="label">Machine Learning Course Assignment &middot; Image Classification</div>
+      <div class="title">FlowerNet:<br>Custom Flower Image<br>Classification with Five<br>CNN Models</div>
+      <div class="subtitle">A custom dataset of 300 flower images &mdash; daisy, rose and sunflower,
+        100 images per class &mdash; is classified with five deep learning models under 5-fold
+        stratified cross-validation. The project applies data augmentation, compares five
+        complementary evaluation metrics, and visualises learning curves to detect overfitting.</div>
+      <div class="authors">Course Assignment Report</div>
+      <div class="institution">Computer Vision &amp; Deep Learning project &mdash; dataset collection,
+        model implementation, cross-validated training and evaluation were performed end-to-end
+        for this assignment.</div>
+      <div class="stat-strip">
+        <div class="stat"><div class="num">300</div><div class="lbl">Images</div></div>
+        <div class="stat"><div class="num">3</div><div class="lbl">Classes</div></div>
+        <div class="stat"><div class="num">5</div><div class="lbl">Models</div></div>
+        <div class="stat"><div class="num">5-Fold</div><div class="lbl">Cross-Validation</div></div>
+        <div class="stat"><div class="num">99.0%</div><div class="lbl">Best CV Accuracy</div></div>
+      </div>
+      <div class="footer">
+        <span>FLOWERNET &middot; CUSTOM DATASET PROJECT</span>
+        <span>SEPTEMBER 2026</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

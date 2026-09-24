@@ -1,0 +1,14 @@
+# Local working data — regenerable, too large for git
+dataset_raw/
+results/features/
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Cached features / binary intermediates
+*.npy
+report/body.pdf
+report/cover.pdf
